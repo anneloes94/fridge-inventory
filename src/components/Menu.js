@@ -16,18 +16,18 @@ export default class MenuExampleSecondaryPointing extends Component {
             <h1 className="logo-text">Fridge Inventory</h1>
           </div>
           <Menu.Item
-            name='home'
-            active={activeItem === 'home'}
+            name='Vegetables + fruits'
+            active={activeItem === 'Vegetables + fruits'}
             onClick={this.handleItemClick}
           />
           <Menu.Item
-            name='messages'
-            active={activeItem === 'messages'}
+            name='Dairy'
+            active={activeItem === 'Dairy'}
             onClick={this.handleItemClick}
           />
           <Menu.Item
-            name='friends'
-            active={activeItem === 'friends'}
+            name='Sauces'
+            active={activeItem === 'Sauces'}
             onClick={this.handleItemClick}
           />
           <Menu.Menu position='right'>
@@ -43,10 +43,6 @@ export default class MenuExampleSecondaryPointing extends Component {
             />
           </Menu.Menu>
         </Menu>
-
-        <Segment>
-          <img src='/images/wireframe/media-paragraph.png' />
-        </Segment>
       </div>
     )
   }
