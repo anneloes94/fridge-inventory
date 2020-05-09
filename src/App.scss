@@ -15,6 +15,7 @@ div.ui.menu {
   padding: $spacing 0 0;
 }
 
+// MENU
 .logo-text {
   font-family: $title-font;
   padding: 0 $spacing-double 0 $spacing;
@@ -49,12 +50,16 @@ div.ui.menu {
   }
 }
 
-.food-content {
+
+// FoodCarousel
+
+.food-carousel {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   // width: 100vw;
   // height: 100vh;
   background-color: $neutral;
+  width: 50%;
 }
 
