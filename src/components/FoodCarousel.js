@@ -1,41 +1,58 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Carousel from "semantic-ui-carousel-react";
-import { Image, Button } from "semantic-ui-react";
-
-
+import React from 'react';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import FoodItem from './FoodItem.js';
 
 export default function FoodCarousel () {
-  let elements = [
+
+  const foodItems = [
     {
-      render: () => {
-        return (
-          <Image src="https://i.pinimg.com/originals/09/6d/f0/096df0eb195b8f0d9475924f9a1e9425.jpg" />
-        );
-      }
+      id: 0,
+      name: "eggs",
+      image: "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      validUntil: "05/12/2020"
     },
     {
-      render: () => {
-        return <Image src="https://i.imgur.com/0eRe75Y.jpg" />;
-      }
+      id: 1,
+      name: "more eggs",
+      image: "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      validUntil: "06/12/2020"
     },
     {
-      render: () => {
-        return (
-          <Image src="https://flipwallpapers.com/wallpapers/anime-wallpaper-hd-resolution-For-desktop-Wallpaper.jpg" />
-        );
-      }
+      id: 2,
+      name: "even more eggs",
+      image: "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      validUntil: "07/12/2020"
     }
-  ];
-  return (
-    <div className="food-carousel">
-      <Carousel
-        elements={elements}
-        duration={3000}
-        animation="slide left"
-        showNextPrev={false}
-        showIndicators={true}
-      />
-    </div>
-  );
-};
+  ]
+
+  let foodItemSlides = foodItems.forEach(foodItem => {
+    <Slide 
+      index={foodItem.id}>
+        <FoodItem 
+          name={foodItem.name}
+          image={foodItem.image}
+          validUntil={validUntil}
+        />
+      </Slide>
+  })
+    return (
+      <div className="">
+        <CarouselProvider
+          naturalSlideWidth={100}
+          naturalSlideHeight={100}
+          totalSlides={3}
+          visibleSlides={3}
+        >
+          <Slider>
+            <Slide
+            <Slide index={0}>I am the first Slide.</Slide>
+            <Slide index={1}>I am the second Slide.</Slide>
+            <Slide index={2}>I am the third Slide.</Slide>
+          </Slider>
+          <ButtonBack>Back</ButtonBack>
+          <ButtonNext>Next</ButtonNext>
+        </CarouselProvider>
+      </div>
+    );
+}

@@ -7,9 +7,7 @@ export default function App() {
   return (
     <div>
       <Menu />
-      <main>
-        <FoodCarousel />
-      </main>
+      <FoodCarousel />
     </div>
   );
 }
