@@ -1,4 +1,8 @@
-$font-family: "Source Sans Pro", sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Baloo+2:400,500,600,700,800|Amatic+SC:400,700|Balsamiq+Sans:400,400i,700,700i&display=swap');
+
+$text-font: "Source Sans Pro", sans-serif;
+$header-font: "Baloo 2", cursive;
+$title-font: 'Amatic SC';
 
 $active-opacity: 1;
 $inactive-opacity: 0.15;
@@ -6,14 +10,15 @@ $inactive-opacity: 0.15;
 $white: #fff;
 $black: #000;
 
-$dark-background: #92A68D;
-$light-background: #C1D9BA;
+$neutral: #fbfad3; 
+$light-green: #c6e377;
+$green: #729d39;
+$dark-green: #36622b;
 
 
-$weeks-colors: #54a0ff, #48dbfb, #1dd1a1, #5f27cd;
-$booked-color: #54a0ff;
 $danger-color: #ee5253;
 $error-color: #ff9f43;
 $confirm-color: #10ac84;
 
 $spacing: 2rem;
+$spacing-double: 4rem;
