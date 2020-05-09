@@ -26,33 +26,29 @@ export default function FoodCarousel () {
     }
   ]
 
-  let foodItemSlides = foodItems.forEach(foodItem => {
-    <Slide 
-      index={foodItem.id}>
-        <FoodItem 
-          name={foodItem.name}
-          image={foodItem.image}
-          validUntil={validUntil}
-        />
-      </Slide>
-  })
-    return (
-      <div className="">
-        <CarouselProvider
-          naturalSlideWidth={100}
-          naturalSlideHeight={100}
-          totalSlides={3}
-          visibleSlides={3}
-        >
-          <Slider>
-            <Slide
-            <Slide index={0}>I am the first Slide.</Slide>
-            <Slide index={1}>I am the second Slide.</Slide>
-            <Slide index={2}>I am the third Slide.</Slide>
-          </Slider>
-          <ButtonBack>Back</ButtonBack>
-          <ButtonNext>Next</ButtonNext>
-        </CarouselProvider>
-      </div>
-    );
+  return (
+    <div className="food-carousel">
+      <CarouselProvider
+        naturalSlideWidth={100}
+        naturalSlideHeight={100}
+        totalSlides={3}
+        visibleSlides={3}
+      >
+        <Slider>
+          {foodItems.map(foodItem =>
+            <Slide 
+              index={foodItem.id}>
+              <FoodItem 
+                name={foodItem.name}
+                image={foodItem.image}
+                validUntil={foodItem.validUntil}
+              />
+            </Slide>
+          )}
+        </Slider>
+        <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext>
+      </CarouselProvider>
+    </div>
+  );
 }

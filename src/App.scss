@@ -54,12 +54,10 @@ div.ui.menu {
 // FoodCarousel
 
 .food-carousel {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  // width: 100vw;
-  // height: 100vh;
-  background-color: $neutral;
-  width: 50%;
+  margin: $spacing;
 }
 
+.food-carousel li {
+  margin-left: auto;
+  margin-right: auto;
+}
