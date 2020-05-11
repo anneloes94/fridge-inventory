@@ -1,13 +1,14 @@
 import React from 'react';
-import Menu from './components/Menu.js'
-import FoodCarousel from './components/FoodCarousel'
+import Menu from './components/Menu'
+import Main from './components/Main'
+
 import './App.scss';
 
 export default function App() {
   return (
     <div>
       <Menu />
-      <FoodCarousel />
+      <Main />
     </div>
   );
 }
