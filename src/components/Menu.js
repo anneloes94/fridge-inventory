@@ -10,7 +10,7 @@ export default class MenuExampleSecondaryPointing extends Component {
     const { activeItem } = this.state
 
     return (
-      <div>
+      <div id="menu">
         <Menu pointing secondary>
           <div>
             <h1 className="logo-text">Fridge Inventory</h1>
