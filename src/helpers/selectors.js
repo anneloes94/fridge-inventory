@@ -1,8 +1,9 @@
-function changeQuantityProduct () {
 
+function addFoodItem () {
+  
 }
 
-function addProduct () {
+function changeQuantityProduct () {
 
 }
 
@@ -10,3 +11,12 @@ function getProductCategories () {
 
 }
 
+function searchIngredient () {
+
+}
+
+function searchProduct () {
+
+}
+
+export { addFoodItem, changeQuantityProduct, getProductCategories, searchIngredient, searchProduct }
